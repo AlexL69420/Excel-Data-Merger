@@ -6,9 +6,10 @@ import "./index.css";
 import NotFoundPage from "./pages/NotFoundPage.tsx";
 import { FileProvider } from "./contexts/FileContext.tsx";
 
-// Добавляем динамическое определение basename
+// Динамическое определение basename
 const basename = import.meta.env.PROD ? "/Excel-Data-Merger" : "/";
 
+// Определение роутера
 const router = createBrowserRouter(
   [
     {
@@ -18,7 +19,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: basename, // Добавляем basename в конфигурацию роутера
+    basename: basename,
   },
 );
 
